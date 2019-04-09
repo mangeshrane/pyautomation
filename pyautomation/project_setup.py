@@ -110,7 +110,7 @@ def main():
     project = os.path.join(project_dir, project_name[0])
     os.mkdir(project)
     with open(".rootfile", 'w') as f:
-        f.write("created by pyautomation...\nDo not remove this file it used to get root directory.\nproject root directory can be changed by moving this file")
+        f.write("# created by pyautomation...\nDo not remove this file it used to get root directory.\nproject root directory can be changed by moving this file")
     config = os.path.join(project, "config")
     os.makedirs(config)
     os.makedirs(os.path.join(project, "testdata"))
@@ -123,12 +123,12 @@ def main():
         yaml.dump(config_file, f, default_flow_style=False)
     os.chdir(pages)
     with open("__init__.py", "w") as f:
-        f.write("Page objects place in this directory")
+        f.write("# Page objects place in this directory")
     with open("search_page.py", "w") as f:
         f.write(page)
     os.chdir(test_suites)
     with open("__init__.py", "w") as f:
-        f.write("test_suites place in this directory")
+        f.write("# test_suites place in this directory")
     with open("test_search.py", "w") as f:
         f.write(tests)
     with open("test_api.py", "w") as f:
