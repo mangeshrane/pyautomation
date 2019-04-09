@@ -18,7 +18,6 @@ class WebTest():
         
         '''
         self.driver = WebDrivers().get()
-        LOG.info("getting driver " + str(request.nodeid))
         request.cls.driver = self.driver 
         yield 
         # Close browser window:
