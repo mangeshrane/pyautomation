@@ -15,9 +15,8 @@ setup(
               ],
     scripts=[],
     #Entry point to found by pytest
-    entry_points={'pytest11': [
-        'pytest-pyautomation=pyautomation.plugin',
-    ]},
+    entry_points={'pytest11': ['pytest-pyautomation=pyautomation.plugin',],
+                  'console_scripts': ['pyautomation=pyautomation.project_setup:main'],},
     url='',
     license='',
     description='',
@@ -38,7 +37,6 @@ setup(
         "py==1.8.0",
         "pytest==4.4.0",
         "pytest-forked==1.0.2",
-        'pytest-pyautomation==1.0',
         "pytest-xdist==1.28.0",
         "PyYAML==5.1",
         "requests==2.21.0",
@@ -46,7 +44,7 @@ setup(
         "six==1.12.0",
         "urllib3==1.24.1",
         "xlrd==1.2.0",
-        "pytest-html==1.20.0"
+        "pytest-html==1.20.0",
     ],
     classifiers=["Framework :: Pytest"],
 )

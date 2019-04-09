@@ -20,9 +20,9 @@ def config(request):
     else:
         print("Config file doesn't exist")
 
-@pytest.fixture(scope="function", autouse=True)
-def browser(request):
-    return WebDrivers.get()
+# @pytest.fixture(scope="function")
+# def browser(request):
+#     return WebDrivers.get()
     
 @pytest.fixture(scope="session", autouse=True)
 def set_browser(request):

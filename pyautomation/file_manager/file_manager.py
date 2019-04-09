@@ -21,7 +21,7 @@ class FileManager(object):
         """
             returns TEST_DATA directory for project
         """
-        cls.TEST_DATA = os.path.join(cls.get_project_root(), "testData")
+        cls.TEST_DATA = os.path.join(cls.get_project_root(), "testdata")
         return cls.TEST_DATA
     
     @staticmethod
