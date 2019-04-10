@@ -109,6 +109,7 @@ def main():
     print("Creating project...")
     project = os.path.join(project_dir, project_name[0])
     os.mkdir(project)
+    os.chdir(project)
     with open(".rootfile", 'w') as f:
         f.write("# created by pyautomation...\nDo not remove this file it used to get root directory.\nproject root directory can be changed by moving this file")
     config = os.path.join(project, "config")
