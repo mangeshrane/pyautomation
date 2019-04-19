@@ -8,7 +8,8 @@ from selenium.webdriver.firefox.options import Options as ffOptions
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 import os
-from pyautomation import CONFIG, LOG
+from pyautomation import CONFIG
+from pyautomation.logger import LOG
 
 
 class WebDrivers(object):

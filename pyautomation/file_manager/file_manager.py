@@ -13,7 +13,7 @@ class FileManager(object):
     This class contains methods to manage files
      
     '''
-    __rootdir__ = None
+    __rootdir__ = ""
     TEST_DATA = ""
     
     @classmethod
@@ -37,7 +37,7 @@ class FileManager(object):
         returns a project root directory which is identified by '.rootfile'
         root directory can be changed by moving '.rootfile'
         """
-        if(cls.__rootdir__ != None):
+        if(cls.__rootdir__):
             return cls.__rootdir__
 
         path = os.getcwd()

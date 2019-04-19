@@ -22,8 +22,8 @@ setup(
     description='',
     long_description=open('README.md').read(),
     install_requires=[
-        "allure-pytest==2.6.2",
-        "allure-python-commons==2.6.2",
+        "allure-pytest==2.6.0",
+        "allure-python-commons==2.6.0",
         "apipkg==1.5",
         "atomicwrites==1.3.0",
         "attrs==19.1.0",

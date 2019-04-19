@@ -1,7 +1,7 @@
 import os
 import yaml
-from pyautomation import LOG
 from pyautomation.file_manager.file_manager import FileManager
+from pyautomation.logger import LOG
 
 
 class Config(object):

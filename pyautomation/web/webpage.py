@@ -11,7 +11,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
-from pyautomation import CONFIG, LOG
+from pyautomation import CONFIG
+from pyautomation.logger import LOG
 from pyautomation.web.element import Element
 
 

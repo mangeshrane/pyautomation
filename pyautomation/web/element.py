@@ -5,7 +5,7 @@ Created on Feb 11, 2019
 '''
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from pyautomation import LOG
+from pyautomation.logger import LOG
 
 
 class Element(object):

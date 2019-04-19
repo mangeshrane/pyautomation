@@ -1,7 +1,7 @@
 import xlrd
 import os
 from pyautomation.file_manager.file_manager import FileManager
-from pyautomation import LOG
+from pyautomation.logger import LOG
 
 
 class ExcelReader(object):

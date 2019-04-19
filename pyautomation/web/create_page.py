@@ -5,7 +5,7 @@ Created on Feb 12, 2019
 '''
 from selenium.common.exceptions import TimeoutException
 from pyautomation.web.webpage import WebPage
-from pyautomation import LOG
+from pyautomation.logger import LOG
 
 
 class CreatePage(object):
