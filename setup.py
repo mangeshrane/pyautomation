@@ -7,7 +7,7 @@ setup(
     author_email='ranemangesh555@gmail.com',
     packages=['pyautomation',
               'pyautomation.api',
-              'pyautomation.browsers',
+              'pyautomation.drivers',
               'pyautomation.configuration',
               'pyautomation.data_providers',
               'pyautomation.file_manager',

@@ -4,6 +4,7 @@ Created on Jan 24, 2019
 '''
 import os
 import re
+from zipfile import ZipFile 
 
 
 class FileManager(object):
@@ -53,3 +54,19 @@ class FileManager(object):
             if os.path.isfile(target_path):
                 cls.__root_folder__ = path
                 return cls.__root_folder__
+    
+    @staticmethod
+    def get_all_file_paths(directory): 
+        file_paths = [] 
+        for root, directories, files in os.walk(directory): 
+            for filename in files: 
+                filepath = os.path.join(root, filename) 
+                file_paths.append(filepath) 
+        return file_paths
+
+    @staticmethod
+    def create_zip(filespath, outputpath, filename):
+        with ZipFile(os.path.join(outputpath, filename),'w') as zip: 
+            for file in FileManager.get_all_file_paths(filespath): 
+                zip.write(file)
+

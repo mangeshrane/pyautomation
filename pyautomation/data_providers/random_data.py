@@ -7,7 +7,7 @@ import random
 import string
 
 
-class Random(object):
+class RandomData(object):
     '''
     This class generates random test data
     '''

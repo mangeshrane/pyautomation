@@ -2,17 +2,17 @@ from abc import ABC
 
 class Application(ABC):
     
-    def forceStop(self):
+    def force_stop(self):
         pass
     
-    def clearData(self):
+    def clear_data(self):
         pass
     
     def open(self):
         pass
     
-    def packageID(self):
+    def package_id(self):
         pass
     
-    def activityID(self):
+    def activity_id(self):
         pass 

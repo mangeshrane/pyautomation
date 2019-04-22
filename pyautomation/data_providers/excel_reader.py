@@ -1,7 +1,7 @@
 import xlrd
 import os
-from pyautomation.file_manager.file_manager import FileManager
-from pyautomation.logger import LOG
+from core.file_manager.file_manager import FileManager
+from core.logger import LOG
 
 
 class ExcelReader(object):
@@ -10,7 +10,7 @@ class ExcelReader(object):
         pass
         
     @staticmethod    
-    def get_data_map(filename, data_filter, headers=True, sheet_no=0):
+    def get_data_map(filename, data_filter, sheet_no=0):
         workbook = xlrd.open_workbook(os.path.join(FileManager.get_test_datadir(), filename))
         LOG.info("using excel sheet " + filename)
         data_filter = data_filter
@@ -35,3 +35,22 @@ class ExcelReader(object):
             dict_list.append(d)
         LOG.info("returning data from excel")
         return dict_list   
+    
+    @staticmethod
+    def get_data(filename, data_filter, sheet_no=0, fields=None):
+        dataset = ExcelReader.get_data_map(filename, data_filter, sheet_no)
+        edata = []
+        if fields:
+            for data in dataset:
+                edata.append(
+                    tuple(data[f] for f in fields)
+                    )
+            data = (",".join(fields), edata)
+            return data
+        else:
+            for data in dataset:
+                keys = list(dataset[0].keys())
+                edata.append(tuple(data[f] for f in keys))
+            data = (",".join(keys), edata)
+            return data
+
