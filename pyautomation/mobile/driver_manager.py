@@ -13,7 +13,7 @@ class MobileDrivers(webdriver.Remote):
         pass
     
     def get_android_driver(self):
-        caps = DesiredCapabilities.ANDROID;
+        caps = DesiredCapabilities.ANDROID.copy();
         for key, value in CONFIG.get("android.capabilities"):
             caps[key] = value
         driver = webdriver.Remote(CONFIG.get("android.url"), caps)

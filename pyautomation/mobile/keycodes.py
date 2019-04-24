@@ -10,3 +10,4 @@ class AndroidKeys:
     MENU = 82
     SETTINGS = 176
     SPACE = 62
+    RECENTS = 0x000000bb

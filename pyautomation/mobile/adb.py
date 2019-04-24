@@ -1,6 +1,7 @@
 import subprocess
 import os
 from pyautomation import CONFIG
+from pyautomation.logger import LOG
 
 class Adb(object):
     
@@ -89,6 +90,16 @@ class Adb(object):
 
     def get_device_carrier(self, deviceid):
         return self.command("adb -s " + deviceid + " shell getprop gsm.operator.alpha")
+    
+    def get_available_devices(self):
+        LOG.info("Checking for available devices")
+        devices = []
+        connected_devices = self.get_connected_devices()
+        for connected_device in connected_devices:
+            apps = self.get_installed_packages(connected_device)
+            if "io.appium.unlock" not in apps:
+                devices.append(connected_device)
+        return devices
     
     def __del__(self):
         self.command("adb kill-server")
