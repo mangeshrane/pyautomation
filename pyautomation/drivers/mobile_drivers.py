@@ -8,16 +8,13 @@ from appium import webdriver
 from pyautomation.configuration import CONFIG
 
 
-class MobileDrivers():
-    
-    def android(self):
-        caps = DesiredCapabilities.ANDROID.copy();
-        caps["browserName"]: "Safari"
-        caps["deviceName"]: "iPhone 6 Device"
-        caps["platformVersion"]: "8.4"
-        caps['no-reset'] = 'true'
-        caps['full-reset'] = 'False'
-        caps = DesiredCapabilities.ANDROID.copy();
-        for key, value in CONFIG.get("android.capabilities"):
+class MobileDrivers:
+
+    @staticmethod
+    def mobile() -> webdriver.Remote:
+        caps = DesiredCapabilities.ANDROID.copy()
+        config = CONFIG.get("mobile.capabilities").items()
+        for key, value in config:
             caps[key] = value
         driver = webdriver.Remote(CONFIG.get("android.url"), caps)
+        return driver

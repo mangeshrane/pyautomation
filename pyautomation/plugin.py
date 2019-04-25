@@ -1,5 +1,6 @@
 import os
 import pytest
+from selenium.common.exceptions import WebDriverException
 
 """Configuration for pytest runner."""
 import allure
@@ -22,7 +23,7 @@ def config(request):
 @pytest.fixture(scope="function")
 def browser(request):
     return WebDrivers.get()
-    
+
 @pytest.fixture(scope="session", autouse=True)
 def set_browser(request):
     browser = request.config.option.browser
@@ -41,7 +42,7 @@ def pytest_runtest_makereport(item, call):
         try:
             _driver = item.cls.driver
         except Exception:
-            _driver = item.funcargs.get('browser', None)
+            pass
         # if not exception
         else:
             if report.when == "call":
@@ -50,11 +51,14 @@ def pytest_runtest_makereport(item, call):
                 xfail = hasattr(report, 'wasxfail')
                 # Go to screenshot only when UI tests
                 if (report.skipped and xfail) or (report.failed and not xfail):
-                    url = _driver.current_url
-                    extra.append(pytest_html.extras.url(url))
+                    try:
+                        url = _driver.current_url
+                        extra.append(pytest_html.extras.url(url))
+                    except WebDriverException as e:
+                        pass
                     screenshot = _driver.get_screenshot_as_base64()
                     extra.append(pytest_html.extras.image(screenshot, ''))
-                    allure.attach('screenshot', _driver.get_screenshot_as_png(), type=AttachmentType.PNG)
+                    allure.attach(_driver.get_screenshot_as_png(), 'Screen-shot', AttachmentType.PNG)
     report.extra = extra
     
 # Runs after complete session

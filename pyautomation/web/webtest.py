@@ -5,11 +5,13 @@ Created on Feb 28, 2019
 '''
 
 import pytest
+import allure
 from pyautomation.drivers.web_drivers import WebDrivers
 from pyautomation.configuration import CONFIG
 
+
 @pytest.mark.usefixtures("web_driver")
-class WebTest():
+class WebTest:
     
     @pytest.fixture(scope=CONFIG.get("tests.browser.scope", "class"))
     def web_driver(self, request):
@@ -19,6 +21,6 @@ class WebTest():
         '''
         self.driver = WebDrivers().get()
         request.cls.driver = self.driver 
-        yield 
+        yield
         # Close browser window:
         self.driver.quit()

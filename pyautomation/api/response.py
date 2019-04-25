@@ -8,6 +8,10 @@ import json
 from requests.models import Response as rp
 from collections import namedtuple
 from pprint import pformat
+import allure
+
+ALLURE_RESP_TML = '<p> <h> <b> URL: </b> </h> {0}</p><p> <h> <b> Body<br> </b> </h> {1}</p><p> <h> <b> Headers<br> </b> </h> {2}</p><p> <h> <b> cookies<br> </b> </h> {3}</p><p> <h> <b> Status Code<br> </b> </h> {4}</p>'
+
 
 class Response(object):
     '''
@@ -22,6 +26,15 @@ class Response(object):
         print("API Response headers : \n\t" + pformat(str(response.headers)))
         print("API Response cookies : \n\t" + pformat(str(response.cookies)))
         print("API Response status code : \n\t" + pformat(str(response.status_code)))
+        allure.attach(
+            ALLURE_RESP_TML.format(pformat(str(response.url)),
+                                   pformat(str(response.text)),
+                                   pformat(str(response.headers)),
+                                   pformat(str(response.cookies)),
+                                   pformat(str(response.status_code))
+                                   ),
+            'Response',
+            allure.attachment_type.HTML)
         if not isinstance(response, rp):
             raise ValueError
         self.url = response.url
