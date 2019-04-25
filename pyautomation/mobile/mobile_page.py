@@ -8,7 +8,7 @@ self.driver.find_element_by_xpath('//android.widget.Switch[@content-desc="Airpla
 self.driver.back()
 '''
 from pyautomation.mobile.keycodes import AndroidKeys
-from pyautomation.logger import LOG
+from pyautomation.logger.logger import LOG
 class MobilePage(object):
     
     def __init__(self, driver: webdriver.Remote):

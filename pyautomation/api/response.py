@@ -60,9 +60,9 @@ class Response(object):
 class PyJSON(object):
     def __init__(self, d):
         if type(d) is str:
-            d = json.loads(d)
-
-        self.from_dict(d)
+            self.d = json.loads(d)
+        else:
+            self.d = self.from_dict(d)
 
     def from_dict(self, d):
         self.__dict__ = {}
@@ -78,6 +78,16 @@ class PyJSON(object):
                 value = value.to_dict()
             d[key] = value
         return d
+    
+    def get(self, key):
+        if "." in key:
+            tmp = self.d
+            keys = key.split(".")
+            for k in keys:
+                tmp = tmp[k]
+            return tmp
+        else:
+            return self.__dict__['d'][key]
 
     def __repr__(self):
         return str(self.to_dict())

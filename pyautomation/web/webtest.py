@@ -5,9 +5,8 @@ Created on Feb 28, 2019
 '''
 
 import pytest
-from pyautomation import CONFIG
-from pyautomation.logger import LOG
-from pyautomation.browsers.web_drivers import WebDrivers
+from pyautomation.drivers.web_drivers import WebDrivers
+from pyautomation.configuration import CONFIG
 
 @pytest.mark.usefixtures("web_driver")
 class WebTest():

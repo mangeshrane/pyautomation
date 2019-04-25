@@ -1,10 +1,10 @@
 import json
 from collections import namedtuple
 from builtins import staticmethod
-from core.file_manager.file_manager import FileManager
 import os
-from core.logger import LOG
 
+from pyautomation.file_manager.file_manager import FileManager
+from pyautomation.logger.logger import LOG
 
 class JSONReader(object):
 

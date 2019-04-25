@@ -9,8 +9,8 @@ import urllib.parse
 import json
 from requests.auth import HTTPDigestAuth
 from pprint import pformat
-from pyautomation import CONFIG
 from pyautomation.api.response import Response
+from pyautomation.configuration import CONFIG
 
 
 class Request(object):

@@ -3,10 +3,10 @@ Created on Apr 15, 2019
 
 @author: mrane
 '''
-from pyautomation.mobile.locator_type import UiAutomator
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from pyautomation import LOG
+from pyautomation.mobile.locator_type import UiSelector
+from pyautomation.logger.logger import LOG
 
 class MobileElement(object):
     
@@ -21,7 +21,7 @@ class MobileElement(object):
         
         '''
         self._by = by
-        if isinstance(locator, UiAutomator):
+        if isinstance(locator, UiSelector):
             self._locator = locator.locator
         else:
             self._locator = locator
@@ -97,7 +97,7 @@ class MobileElements(object):
         
         '''
         self._by = by
-        if isinstance(locator, UiAutomator):
+        if isinstance(locator, UiSelector):
             self._locator = locator.locator
         else:
             self._locator = locator

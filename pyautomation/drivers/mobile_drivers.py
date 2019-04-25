@@ -5,8 +5,8 @@ Created on Apr 22, 2019
 '''
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from appium import webdriver
+from pyautomation.configuration import CONFIG
 
-from pyautomation import CONFIG
 
 class MobileDrivers():
     

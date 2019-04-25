@@ -7,8 +7,6 @@ import logging
 import os
 from pyautomation.file_manager.file_manager import FileManager
 
-
-
 _log = logging.getLogger('CORE')
 _log.setLevel(logging.DEBUG)
 fh = logging.FileHandler(os.path.join(FileManager.get_project_root(), "logs.log"))

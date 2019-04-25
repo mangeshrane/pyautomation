@@ -4,8 +4,7 @@ import pytest
 """Configuration for pytest runner."""
 import allure
 from allure_commons.types import AttachmentType
-from pyautomation.browsers.web_drivers import WebDrivers
-from pyautomation import CONFIG
+from pyautomation.drivers.web_drivers import WebDrivers
 
 def pytest_addoption(parser):
     parser.addoption("--config", action="store")
@@ -20,9 +19,9 @@ def config(request):
     else:
         print("Config file doesn't exist")
 
-# @pytest.fixture(scope="function")
-# def browser(request):
-#     return WebDrivers.get()
+@pytest.fixture(scope="function")
+def browser(request):
+    return WebDrivers.get()
     
 @pytest.fixture(scope="session", autouse=True)
 def set_browser(request):
@@ -41,10 +40,8 @@ def pytest_runtest_makereport(item, call):
     if report.when == 'call' or report.when == "setup":
         try:
             _driver = item.cls.driver
-            if not _driver:
-                _driver = item.funcargs['browser']
         except Exception:
-            pass
+            _driver = item.funcargs.get('browser', None)
         # if not exception
         else:
             if report.when == "call":
@@ -57,8 +54,7 @@ def pytest_runtest_makereport(item, call):
                     extra.append(pytest_html.extras.url(url))
                     screenshot = _driver.get_screenshot_as_base64()
                     extra.append(pytest_html.extras.image(screenshot, ''))
-                    if CONFIG.get("reporting", "html") == "allure":
-                        allure.attach('screenshot', _driver.get_screenshot_as_png(), type=AttachmentType.PNG)
+                    allure.attach('screenshot', _driver.get_screenshot_as_png(), type=AttachmentType.PNG)
     report.extra = extra
     
 # Runs after complete session
