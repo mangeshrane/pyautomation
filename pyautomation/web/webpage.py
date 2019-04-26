@@ -5,7 +5,8 @@ Created on Feb 5, 2019
 '''
 from abc import ABC, abstractmethod
 
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException,\
+    StaleElementReferenceException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -14,6 +15,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from pyautomation.web.element import Element
 from pyautomation.configuration import CONFIG
 from pyautomation.logger.logger import LOG
+from selenium.webdriver.remote.webelement import WebElement
 
 
 
@@ -27,7 +29,6 @@ class WebPage(ABC):
         """
         parameters:
             driver: webdriver instance
-            implicit_wait: [optional] default=10
         """
         self.base_url = CONFIG.get("application.url", "")
         super().__init__(driver)
@@ -61,6 +62,9 @@ class WebPage(ABC):
                 assert self.loginBtn.is_displayed(), "Not displayed"
         """
         pass
+    
+    def refresh(self):
+        self.driver.refresh()
     
     def wait_for_multiple_windows(self):
         """
@@ -99,13 +103,9 @@ class WebPage(ABC):
         moves the mouse to element
         
         parameters:
-            element: Element type->core.page.Element
+            element: Element 
         """
-        if isinstance(element, Element):
-            ActionChains().move_to_element(element)
-        else:
-            raise AttributeError("element should be of Element type")
-            LOG.error("element should be of Element type")
+        ActionChains().move_to_element(element)
     
     def get_dropdown(self, element):
         """
@@ -117,11 +117,7 @@ class WebPage(ABC):
         """
         performs click on a element using Javascript
         """
-        if isinstance(element, Element):
-            self.driver.execute_script("arguments[0].click()", element)
-        else:
-            raise AttributeError("element should be of Element type")
-            LOG.error("element should be of Element type")
+        self.driver.execute_script("arguments[0].click()", element)
 
     def click_and_hold(self, element):
         """
@@ -167,14 +163,10 @@ class WebPage(ABC):
         else:
             raise AttributeError("loc must be of Element type")
 
-    def clear_and_send_keys(self, element, keys):
+    def clear_and_send_keys(self, element: WebElement, keys):
         """
         clears default value and sends key to the element
         """
-        if isinstance(element, Element):
-            pass
-        else:
-            raise ValueError("Needed element of type Element")
         element.click()
         element.clear()
         element.send_keys(keys)
@@ -205,10 +197,178 @@ class WebPage(ABC):
         returns -> boolean
         """
         self.driver.execute_script('return document.readyState == "complete"')
-    
-    def assert_page_contains(self, string):
-        """
-        asserts if given string is in the webpage
-        """
-        assert string in self.driver.page_source, "Content doesn't match. Message is {0}".format(string)
 
+    def wait_for_element_to_be_present(self, element, timeout=10):
+ 
+        """
+        This method is used for explicit waits till element present
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        try:
+            WebDriverWait(self.driver, timeout, ignored_exceptions=[StaleElementReferenceException]).until(
+                EC.presence_of_element_located((element.__dict__['_by'], element.__dict__['_locator']))
+            )
+            return True
+        except:
+            LOG.error("Timeout while waiting for element to present")
+            return False
+    
+    def wait_for_element_to_be_clickable(self, element, timeout=10):
+
+        """
+        This function is used for explicit waits till element clickable
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        try:
+            WebDriverWait(self.driver, timeout, ignored_exceptions=[StaleElementReferenceException]).until(
+                EC.element_to_be_clickable((element.__dict__['_by'], element.__dict__['_locator']))
+            )
+            return True
+        except:
+            LOG.error("Exception occurred while waiting for element to be clickable.")
+            return False
+
+    def wait_for_element_to_be_displayed(self, element, timeout=10):
+
+        """
+        This function is used for explicit waits till element displayed
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        try:
+            WebDriverWait(self.driver, timeout, ignored_exceptions=[StaleElementReferenceException]).until(
+                EC.visibility_of_element_located((element.__dict__['_by'], element.__dict__['_locator']))
+            )
+            return True
+        except:
+            self.log.error("Exception occurred while waiting for element to be visible.")
+            return False
+
+    def wait_for_element_to_be_invisible(self, element, timeout=10):
+
+        """
+        This function is used for explicit waits till element displayed
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        try:
+            WebDriverWait(self.driver, timeout, ignored_exceptions=[StaleElementReferenceException]).until(
+                EC.invisibility_of_element_located((element.__dict__['_by'], element.__dict__['_locator']))
+            )
+            return True
+        except:
+            return False
+
+    def is_element_present(self, element, timeout=10):
+
+        """
+        This method is used to return the boolean value for element present
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        flag = False
+        try:
+            if self.wait_for_element_to_be_present(element, timeout):
+                flag = True
+            else:
+                LOG.error(
+                    "Element not present with locator_properties: " + element.__dict__['_by'] + " =" + element.__dict__['_locator'])
+        except:
+            LOG.error("Exception occurred during element identification.")
+        return flag
+
+    def verify_element_not_present(self, element, timeout=10):
+
+        """
+        This method is used to return the boolean value for element present
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        flag = False
+        try:
+            if self.wait_for_element_to_be_invisible(element, timeout):
+                LOG.info(
+                    "Element invisible with locator_properties: " + element.__dict__['_by'] + "= " + element.__dict__['_locator'])
+                flag = True
+            else:
+                LOG.error(
+                    "Element is visible with locator_properties: " + element.__dict__['_by'] + "= " + element.__dict__['_locator'])
+        except:
+            LOG.error("Exception occurred during element to be invisible.")
+        return flag
+
+    def is_element_displayed(self, element, timeout=10):
+
+        """
+        This method is used to return the boolean value for element displayed
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        try:
+            if self.wait_for_element_to_be_displayed(element, timeout):
+                LOG.info(
+                    "Element found with locator_properties: " + element.__dict__['_by'] + "= " + element.__dict__['_locator'])
+                return True
+            else:
+                LOG.error(
+                    "Element not found with locator_properties: " + element.__dict__['_by'] + "= " + element.__dict__['_locator'])
+                return False
+        except:
+            self.log.error("Exception occurred during element identification.")
+            return False
+
+    def is_element_clickable(self, element, timeout=10):
+
+        """
+        This method is used to return the boolean value for element clickable
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        try:
+            if self.wait_for_element_to_be_clickable(element, timeout):
+                LOG.info(
+                    "Element is clickable with locator_properties: " + element.__dict__['_by'] + " =" + element.__dict__['_locator'])
+                return True
+            else:
+                LOG.error(
+                    "Element is not clickable with locator_properties: " + element.__dict__['_by'] + " =" + element.__dict__['_locator'])
+                return False
+        except:
+            LOG.error("Exception occurred during element identification.")
+            return False
+
+    def is_element_checked(self, element, timeout=10):
+
+        """
+        This method is used to return the boolean value for element checked/ selected
+        :param element: Element
+        :param timeout: time to wait for
+        :return: boolean
+        """
+        flag = False
+        try:
+            if self.is_element_present(element, timeout):
+                element = self.get_element(element, timeout)
+                if element.is_selected():
+                    LOG.info(
+                        "Element is selected/ checked with locator_properties: " +
+                        element.__dict__['_by'] + " =" + element.__dict__['_locator'])
+                    flag = True
+                else:
+                    self.log.error(
+                        "Element is not selected/ checked with locator_properties: " +
+                        element.__dict__['_by'] + " =" + element.__dict__['_locator'])
+        except:
+            flag = False
+
+        return flag

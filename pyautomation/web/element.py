@@ -29,13 +29,17 @@ class Element(object):
         self._wait = wait
 
     def __get__(self, instance, owner):
+        element = None
         if self._wait:
-            return WebDriverWait(instance.driver, self._wait).until(
+            element = WebDriverWait(instance.driver, self._wait).until(
                 EC.presence_of_element_located((self._by, self._locator)))
         else:
-            return instance.driver.find_element(self._by, self._locator)
+            element =  instance.driver.find_element(self._by, self._locator)
         LOG.info("returning element {}={} ".format(self._by, self._locator))
-
+        element.__dict__['_by'] = self._by
+        element.__dict__['_locator'] = self._locator
+        return element
+    
     def __set__(self, instance, name):
         pass
 
@@ -77,39 +81,3 @@ class Elements(object):
 
     def __delete__(self):
         pass
-    
-    @property
-    def count(self):
-        """
-        returns count of elements
-        """
-        return len(self.__get__(self, None))
-    
-    def get_nth_element(self, number):
-        """
-        returns elements of at index specified
-        
-        parameters:
-            number: int
-        """
-        try:
-            if self._elements:
-                self._elements[number]
-            else:
-                self._elements = self.__get__(self, None)
-                self._elements[number]
-        except IndexError:
-            LOG.warning("Index Error occured while getting element")
-            return None
-        
-    def get_last_element(self):
-        """
-        returns last element from elements
-        """
-        return self.get_nth_element(-1)
-    
-    def get_first_element(self):
-        """
-        returns first webelement of specified locator
-        """
-        return self.get_nth_element(0)

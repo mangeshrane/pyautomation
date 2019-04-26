@@ -1,7 +1,7 @@
 import subprocess
 import os
-from pyautomation import CONFIG
-from pyautomation.logger import LOG
+from pyautomation.configuration import CONFIG
+from pyautomation.logger.logger import LOG
 
 class Adb(object):
     

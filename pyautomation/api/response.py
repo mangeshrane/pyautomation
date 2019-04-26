@@ -9,6 +9,9 @@ from requests.models import Response as rp
 from collections import namedtuple
 from pprint import pformat
 import allure
+from pyautomation.logger.logger import LOG
+from jsonschema.validators import validate
+from jsonschema.exceptions import ValidationError
 
 ALLURE_RESP_TML = '<p> <h> <b> URL: </b> </h> {0}</p><p> <h> <b> Body<br> </b> </h> {1}</p><p> <h> <b> Headers<br> </b> </h> {2}</p><p> <h> <b> cookies<br> </b> </h> {3}</p><p> <h> <b> Status Code<br> </b> </h> {4}</p>'
 
@@ -22,10 +25,10 @@ class Response(object):
         '''
         Constructor
         '''
-        print("API Response body : \n\t" + pformat(str(response.text)))
-        print("API Response headers : \n\t" + pformat(str(response.headers)))
-        print("API Response cookies : \n\t" + pformat(str(response.cookies)))
-        print("API Response status code : \n\t" + pformat(str(response.status_code)))
+        LOG.info("API Response body : " + str(response.text))
+        LOG.info("API Response headers : " + str(response.headers))
+        LOG.info("API Response cookies : " + str(response.cookies))
+        LOG.info("API Response status code : " + str(response.status_code))
         allure.attach(
             ALLURE_RESP_TML.format(pformat(str(response.url)),
                                    pformat(str(response.text)),
@@ -48,28 +51,21 @@ class Response(object):
         self.cookies = response.cookies
         self.headers = response.headers
 
-    def assert_response_code(self, response_code):
-        assert self.status_code == response_code, "Response code does not match, expected {0} but found {1}".format(
-            response_code, self.status_code)
-        return self
-
     def _json_object_hook(self, d):
         return namedtuple('response', d.keys())(*d.values())
 
     def json2obj(self, data):
         return json.loads(data, object_hook=self._json_object_hook)
     
-    def assert_status_code(self, status_code):
-        assert status_code == self.status_code, "Status code doesn't match expected {} found {}".format(self.status_code, status_code)
+    def validate_schema(self, schema):
+        try:
+            validate(instance=self.body, schema=schema)
+        except ValidationError as e:
+            LOG.error("Schema Validation error occured :" + e.message)
+            return False
+        else:
+            return True
     
-    def assert_response_contains(self, text):
-        assert text in self.body, "Response body doesn't contains " + text
-    
-    def assert_response_header_contains(self, key, value):
-        assert self.headers.get(key, None) == value, "Response headers doesn't contains {}:{}".format(
-            key, value)
-
-
 class PyJSON(object):
     def __init__(self, d):
         if type(d) is str:

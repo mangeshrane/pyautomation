@@ -59,8 +59,8 @@ class Assertions(object):
     def _report_failures(self):
         if self._failed_expectations:
             _, line, funcname = inspect.stack()[2][1:4]
-            HEAD = '\nAsserting all expectations: \n\tIn test {} at line no {}\n'.format(funcname, line)
-            COUNT = 'Failed Expectations:%s\n' % len(self._failed_expectations)
+            HEAD = 'Asserting all expectations: In test {} at line no {}'.format(funcname, line)
+            COUNT = 'Failed Expectations:%s' % len(self._failed_expectations)
             LOG.info(HEAD)
             LOG.info(COUNT)
             allure.attach('<p>{0}</p><br><p><b>{1}</b></p>'.format(HEAD, COUNT),

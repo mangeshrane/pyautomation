@@ -11,6 +11,9 @@ from requests.auth import HTTPDigestAuth
 from pprint import pformat
 from pyautomation.api.response import Response
 from pyautomation.configuration import CONFIG
+import allure
+from pyautomation.commons.helpers import expand_escape_sequence
+from pyautomation.logger.logger import LOG
 
 
 class Request(object):
@@ -51,6 +54,7 @@ class Request(object):
         if isinstance(header_dict, dict):
             self._headers.update(header_dict)
         else:
+            LOG.error('Parameter must be of dictionary type')
             raise ValueError("Parameter must be of dictionary type")
         return self
 
@@ -81,6 +85,7 @@ class Request(object):
             for key, value in params_dict.items():
                 self.set_path_param(key, value)
         else:
+            LOG.error('Path params should be specified in dictionary')
             raise ValueError("Path params should be specified in dictionary")
     
     def add_form_params(self, param_dict):
@@ -88,6 +93,7 @@ class Request(object):
             for key, val in param_dict.items():
                 self.add_param(key, val)
         else:
+            LOG.error('Form params should be specified in dictionary')
             raise ValueError("Form params should be specified in dictionary ")
         return self
 
@@ -133,7 +139,10 @@ class Request(object):
         self._request = self._request.prepare()
 
     def _get_resp(self):
-        print("API Request : \n\t" + pformat(str({k: v for k, v in self._request.__dict__.items()})))
+        LOG.info("API Request : " + expand_escape_sequence(str({k: v for k, v in self._request.__dict__.items()})))
+        allure.attach('<p>{0}<p>'.format(expand_escape_sequence(pformat(str({k: v for k, v in self._request.__dict__.items()})))),
+                      "Request",
+                      allure.attachment_type.HTML)
         return Response(self._session.send(self._request,
                                            stream=self.stream,
                                            verify=self._cert_file,

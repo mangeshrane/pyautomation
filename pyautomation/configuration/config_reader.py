@@ -21,8 +21,8 @@ class Config(object):
         try:
             self._load_config(self.filename)
         except FileNotFoundError as f:
-            LOG.info("Exception occured " + str(f))
-            LOG.info("Please put config file in [projectRoot]/config/default.yml or set environ variable AUTO_CONFIG")
+            LOG.error("Exception occured " + str(f))
+            LOG.error("Please put config file in [projectRoot]/config/default.yml or set environ variable AUTO_CONFIG")
 
     def _load_config(self, filename):
         config_yaml = open(filename, 'r')
