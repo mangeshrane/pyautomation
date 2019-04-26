@@ -26,10 +26,9 @@ class Config(object):
 
     def _load_config(self, filename):
         config_yaml = open(filename, 'r')
-        self.yml_dict = yaml.load(config_yaml)
+        self.yml_dict = yaml.load(config_yaml, Loader=yaml.FullLoader)
         LOG.info("Succesfully Loaded config")
         config_yaml.close()
-        
 
     def get(self, key, default=None):
         if "." in key:

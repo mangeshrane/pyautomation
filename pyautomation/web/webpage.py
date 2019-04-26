@@ -372,3 +372,15 @@ class WebPage(ABC):
             flag = False
 
         return flag
+    
+    def scroll_up(self):
+        """
+        This methos is used for page scrolling
+        :param direction: it takes the scrolling direction value as parameter
+        :return: it returns nothing
+        """
+        self.driver.execute_script("window.scrollBy(0, -1000);")
+
+    def scroll_down(self):
+        self.driver.execute_script("window.scrollBy(0, 1000);")
+
