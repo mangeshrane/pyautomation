@@ -62,7 +62,7 @@ class UiSelector:
         return self
     
     def clickable(self, clickable):
-        self.locator += '.clickable("{0}")'.format(clickable)
+        self.locator += '.clickable({0})'.format(clickable)
         return self
     
     def checked(self, checked):
