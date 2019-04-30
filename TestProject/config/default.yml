@@ -1,0 +1,37 @@
+api:
+  request:
+    timeout: 20
+application:
+  password: demoadmin
+  username: admin@phptravels.com
+tests:
+  browser:
+    name: chrome
+    scope: class
+webdriver:
+  chrome:
+    arguments:
+    - --disable-extensions
+    - --headless
+    driver: C:\chromedriver.exe
+  firefox:
+    driver: path
+    preferences:
+      browser.download.dir: H:\Downloads
+      browser.download.manager.showWhenStarting: false
+  implicit_wait: 10
+  remote:
+    platform: null
+    url: null
+  sauce:
+    browserName: null
+    caps:
+      browserName: chrome
+      platform: macOS 10.13
+      version: 66.0
+    key: null
+    username: null
+  type: local
+  wait:
+    long: 30
+    short: 10

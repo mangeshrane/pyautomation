@@ -5,7 +5,6 @@ Created on Feb 28, 2019
 '''
 
 import pytest
-import allure
 from pyautomation.drivers.web_drivers import WebDrivers
 from pyautomation.configuration import CONFIG
 

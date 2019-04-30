@@ -1,0 +1,56 @@
+application:
+    username: admin@phptravels.com
+    password: demoadmin
+webdriver:
+    sauce:
+        username: null
+        key: null
+        browserName: null
+        caps:
+            browserName: chrome
+            version: 66
+            platform: 'macOS 10.13'
+    remote:
+        url: 'http://172.26.21.92:4444/wd/hub'
+        platform: Windows
+    type: remote
+    chrome:
+        driver: 'C:\chromedriver.exe'
+        arguments:
+            - '--disable-extensions'
+            - '--headless'
+    firefox:
+        driver: 'C:\geckodriver.exe'
+        preferences:
+            browser.download.dir: 'H:\Downloads'
+            browser.download.manager.showWhenStarting: false
+    wait:
+        short: 10
+        long: 30
+    implicit_wait: 10
+tests:
+    mobile:
+        scope: class
+        no_reset: true
+        full_reset: true
+    browser:
+        name: firefox
+        scope: class
+mobile:
+    remote:
+        url: localhost:4723/wd/hub
+    capabilities:
+        browserName: null
+        deviceName: emulator
+        platformName: android
+        app: nullcl
+        
+        orientation: null
+        platformVersion: 8.0.0
+        appPackage: io.selendroid.testapp
+        appActivity: io.selendroid.testapp.HomeScreenActivity
+android:
+    url: http://localhost:4723/wd/hub
+api:
+    request:
+        timeout: 20
