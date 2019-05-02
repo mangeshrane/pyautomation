@@ -2162,3 +2162,94 @@ CORE-adb.py-101-get_available_devices: Checking for available devices
 CORE-adb.py-101-get_available_devices: Checking for available devices
 CORE-adb.py-101-get_available_devices: Checking for available devices
 CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-102-get_available_devices: Checking for available devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-17-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-104-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-104-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-104-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-108-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-108-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell am force-stop com.google.android.gm.welcome.WelcomeTourActivity
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-108-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell am force-stop com.google.android.gm

@@ -1,6 +1,7 @@
 import subprocess
 import os
 from pyautomation.logger.logger import LOG
+import re
 
 class Adb(object):
     
@@ -18,7 +19,7 @@ class Adb(object):
         else:
             LOG.error('This method is designed to run ADB commands only!')
             raise RuntimeError("This method is designed to run ADB commands only!")
-        output = subprocess.check_output(command, shell=True)
+        output = subprocess.check_output(command)
         if output is None:
             return ""
         else:
@@ -34,8 +35,13 @@ class Adb(object):
                 devices.append(line.replace("device", "").strip())
         return devices;
     
-    def get_foreground_activity(self):
-        return self.command("adb -s "+ self.deviceid +" shell dumpsys window windows | grep mCurrentFocus")
+    def get_foreground_activity(self, package=False):
+        raw = self.command("adb -s "+ self.deviceid +" shell dumpsys window windows | grep mCurrentFocus")
+        grp = re.findall('[\w+\.]+', raw)
+        if package:
+            return '{}/{}'.format(grp[-2], grp[-1])
+        else:
+            return grp[-1]
     
     def get_android_version(self):
         output = self.command("adb -s "+ self.deviceid +" shell getprop ro.build.version.release")
@@ -60,7 +66,7 @@ class Adb(object):
         self.command("adb -s " + self.deviceid + " shell pm clear " + package_id)
 
     def force_stop_app(self, packageid):
-        self.command("adb -s " + self.deviceid +" shell am force-stop "+packageid)
+        self.command("adb -s " + self.deviceid +" shell am force-stop " + packageid)
 
     def install_app(self, apkpath):
         self.command("adb -s "+ self.deviceid +" install " + apkpath);
@@ -109,4 +115,7 @@ class Adb(object):
         return devices
     
     def __del__(self):
-        self.command("adb kill-server")
+        try:
+            self.command("adb kill-server")
+        except:
+            pass
