@@ -1,102 +1,109 @@
 import subprocess
 import os
-from pyautomation.configuration import CONFIG
 from pyautomation.logger.logger import LOG
 
 class Adb(object):
     
     adb = None
     
-    def __init__(self):
+    def __init__(self, deviceid):
         self.adb = self.command("adb start-server")
+        self.deviceid = deviceid
     
-    def command(self, command):
-        if command.startsWith("adb"):
-            command = command.replace("adb ", os.path.join(CONFIG.get("android.home") + "/platform-tools/adb"))
+    @staticmethod
+    def command(command):
+        if command.startswith("adb"):
+            command = command.replace("adb", os.path.join(os.environ['ANDROID_HOME'],"platform-tools", "adb"))
+            LOG.info("Executing command : " + command)
         else:
+            LOG.error('This method is designed to run ADB commands only!')
             raise RuntimeError("This method is designed to run ADB commands only!")
-        output = subprocess.Popen(command);
+        output = subprocess.check_output(command, shell=True)
         if output is None:
-            return "";
+            return ""
         else:
-            return output.strip();
+            return output.decode('utf-8').strip();
     
-    def get_connected_devices(self):
+    @staticmethod
+    def get_connected_devices():
         devices = [];
-        output = self.command("adb devices");
+        output = Adb.command("adb devices")
         for line in str(output).split("\n"):
-            line = line.strip();
-            if line.endsWith("device"):
-                devices.append(line.replace("device", "").strip());
+            line = line.strip()
+            if line.endswith("device"):
+                devices.append(line.replace("device", "").strip())
         return devices;
     
-    def get_foreground_activity(self, deviceid):
-        return self.command("adb -s "+ deviceid +" shell dumpsys window windows | grep mCurrentFocus")
+    def get_foreground_activity(self):
+        return self.command("adb -s "+ self.deviceid +" shell dumpsys window windows | grep mCurrentFocus")
     
-    def get_android_version(self, deviceid):
-        output = self.command("adb -s "+ deviceid +" shell getprop ro.build.version.release")
+    def get_android_version(self):
+        output = self.command("adb -s "+ self.deviceid +" shell getprop ro.build.version.release")
         if(output.length() == 3):
             output+=".0"
         return output
     
-    def get_installed_packages(self, deviceid):
+    def _get_installed_packages(self, deviceid):
         packages = []
         output = self.command("adb -s "+ deviceid +" shell pm list packages").split("\n")
         for packageID in output:
-            packages.append(packageID.replace("package:","").trim())
+            packages.append(packageID.replace("package:","").strip())
         return packages
+    
+    def get_installed_packages(self):
+        return self._get_installed_packages(self.deviceid)
 
-    def open_apps_activity(self, deviceid, packageid, activityid):
-        self.command("adb -s "+ deviceid +" shell am start -c api.android.intent.category.LAUNCHER -a api.android.intent.action.MAIN -n " + packageid + "/" +activityid)
+    def open_apps_activity(self, packageid, activityid):
+        self.command("adb -s "+ self.deviceid +" shell am start -c api.android.intent.category.LAUNCHER -a api.android.intent.action.MAIN -n " + packageid + "/" +activityid)
 
-    def clear_apps_data(self, device_id, package_id):
-        self.command("adb -s " + device_id + " shell pm clear " + package_id)
+    def clear_apps_data(self, package_id):
+        self.command("adb -s " + self.deviceid + " shell pm clear " + package_id)
 
-    def force_stop_app(self, deviceid, packageid):
-        self.command("adb -s " + deviceid +" shell am force-stop "+packageid)
+    def force_stop_app(self, packageid):
+        self.command("adb -s " + self.deviceid +" shell am force-stop "+packageid)
 
-    def install_app(self, deviceid, apkpath):
-        self.command("adb -s "+ deviceid +" install " + apkpath);
+    def install_app(self, apkpath):
+        self.command("adb -s "+ self.deviceid +" install " + apkpath);
 
-    def uninstall_app(self, deviceid, packageid):
-        self.command("adb -s "+ deviceid +" uninstall " + packageid);
+    def uninstall_app(self, packageid):
+        self.command("adb -s "+ self.deviceid +" uninstall " + packageid);
 
-    def clear_log_buffer(self, deviceid):
-        self.command("adb -s "+ deviceid +" shell -c")
+    def clear_log_buffer(self):
+        self.command("adb -s "+ self.deviceid +" shell -c")
 
-    def push_file(self, deviceid, source, target):
-        self.command("adb -s "+ deviceid +" push "+source+" "+target);
+    def push_file(self, source, target):
+        self.command("adb -s "+ self.deviceid +" push "+source+" "+target);
 
-    def pull_file(self, deviceid, source, target):
-        self.command("adb -s " + deviceid + " pull "+source+" "+target);
+    def pull_file(self, source, target):
+        self.command("adb -s " + self.deviceid + " pull "+source+" "+target);
 
-    def delete_file(self, deviceid, target):
-        self.command("adb -s " + deviceid + " shell rm "+ target)
+    def delete_file(self, target):
+        self.command("adb -s " + self.deviceid + " shell rm "+ target)
 
-    def move_file(self, deviceid, source, target):
-        self.command("adb -s " + deviceid + " shell mv "+source+" "+target)
+    def move_file(self, source, target):
+        self.command("adb -s " + self.deviceid + " shell mv "+source+" "+target)
 
-    def take_screenshot(self, deviceid, target):
-        self.command("adb -s " + deviceid + " shell screencap "+target)
+    def take_screenshot(self, target):
+        self.command("adb -s " + self.deviceid + " shell screencap " + target)
 
-    def reboot_device(self, deviceid):
-        self.command("adb -s " + deviceid + " reboot")
+    def reboot_device(self):
+        self.command("adb -s " + self.deviceid + " reboot")
 
-    def get_device_model(self, deviceid):
-        return self.command("adb -s " + deviceid + " shell getprop ro.product.model")
+    def get_device_model(self):
+        return self.command("adb -s " + self.deviceid + " shell getprop ro.product.model")
 
-    def get_device_serial_number(self, deviceid):
-        return self.command("adb -s " + deviceid + " shell getprop ro.serialno")
+    def get_device_serial_number(self):
+        return self.command("adb -s " + self.deviceid + " shell getprop ro.serialno")
 
-    def get_device_carrier(self, deviceid):
-        return self.command("adb -s " + deviceid + " shell getprop gsm.operator.alpha")
+    def get_device_carrier(self):
+        return self.command("adb -s " + self.deviceid + " shell getprop gsm.operator.alpha")
     
     def get_available_devices(self):
         LOG.info("Checking for available devices")
         devices = []
         connected_devices = self.get_connected_devices()
         for connected_device in connected_devices:
-            apps = self.get_installed_packages(connected_device)
+            apps = self._get_installed_packages(connected_device)
             if "io.appium.unlock" not in apps:
                 devices.append(connected_device)
         return devices

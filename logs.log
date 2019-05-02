@@ -2151,3 +2151,14 @@ CORE-config_reader.py-30-_load_config: Succesfully Loaded config
 CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
 CORE-config_reader.py-39-get: config returning mobile.capabilities: {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': None, 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity'}
 CORE-config_reader.py-39-get: config returning android.url: http://localhost:4723/wd/hub
+CORE-adb.py-98-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
+CORE-adb.py-101-get_available_devices: Checking for available devices
