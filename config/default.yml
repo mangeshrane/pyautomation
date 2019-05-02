@@ -31,8 +31,6 @@ webdriver:
 tests:
     mobile:
         scope: class
-        no_reset: true
-        full_reset: true
     browser:
         name: firefox
         scope: class
@@ -43,12 +41,13 @@ mobile:
         browserName: null
         deviceName: emulator
         platformName: android
-        app: nullcl
-        
+        app: C:\Users\mrane\Downloads\selendroid-test-app-0.17.0.apk
         orientation: null
         platformVersion: 8.0.0
         appPackage: io.selendroid.testapp
         appActivity: io.selendroid.testapp.HomeScreenActivity
+        no_reset: true
+        full_reset: true
 android:
     url: http://localhost:4723/wd/hub
 api:
