@@ -1,6 +1,8 @@
 import os
 import pytest
 from selenium.common.exceptions import WebDriverException
+from pyautomation.logger.logger import LOG
+import base64
 
 """Configuration for pytest runner."""
 import allure
@@ -45,21 +47,37 @@ def pytest_runtest_makereport(item, call):
             pass
         # if not exception
         else:
-            if report.when == "call":
-                extra.append(pytest_html.extras.url(_driver.current_url))
+            try:
+                if report.when == 'setup':
+                    _driver.start_recording_screen()
+                    LOG.info("Started screen recording")
+            except:
+                pass
             if report.when == 'call' or report.when == "setup":
                 xfail = hasattr(report, 'wasxfail')
                 # Go to screenshot only when UI tests
                 if (report.skipped and xfail) or (report.failed and not xfail):
                     try:
+                        _video = _driver.stop_recording_screen()
+                        LOG.info("ended screen recording")
+                        with open('D:\Workspace\test.mp4', 'wb') as f:
+                            f.write(base64.b64decode(_video))
+                        LOG.info("written to a file")
                         url = _driver.current_url
+                        allure.attach(url, "Application url", AttachmentType.TEXT)
+                        allure.attach(base64.b64decode(_video), "Video Capture", AttachmentType.MP4)
                         extra.append(pytest_html.extras.url(url))
                     except WebDriverException as e:
-                        pass
+                        LOG.error('Not able to get screen-recording')
+                        LOG.error(e.msg)
                     screenshot = _driver.get_screenshot_as_base64()
                     extra.append(pytest_html.extras.image(screenshot, ''))
                     allure.attach(_driver.get_screenshot_as_png(), 'Screen-shot', AttachmentType.PNG)
     report.extra = extra
+    try:
+        _driver.stop_recording_screen()
+    except:
+        pass
     
 # Runs after complete session
 def pytest_sessionfinish(session, exitstatus):

@@ -30,59 +30,20 @@ class MobileElement(object):
 
     def __get__(self, instance, owner):
         if self._wait:
-            return WebDriverWait(instance.driver, self._wait).until(
+            element = WebDriverWait(instance.driver, self._wait).until(
                 EC.presence_of_element_located((self._by, self._locator)))
         else:
-            return instance.driver.find_element(self._by, self._locator)
+            element = instance.driver.find_element(self._by, self._locator)
+        element.__dict__['_by'] = self._by
+        element.__dict__['_locator'] = self._locator
         LOG.info("returning element {}={} ".format(self._by, self._locator))
+        return element
 
     def __set__(self, instance, name):
         pass
 
     def __delete__(self):
         pass
-    
-    def is_checked(self):
-        return self.__get__(self, None).getAttribute("checked").equals("true")
-
-    def is_checkable(self):
-        return self.__get__(self, None).getAttribute("checkable").equals("true")
-
-    def is_clickable(self):
-        return self.__get__(self, None).getAttribute("clickable").equals("true")
-
-    def isEnabled(self):
-        return self.__get__(self, None).getAttribute("enabled").equals("true");
-
-    def isFocusable(self):
-        return self.__get__(self, None).getAttribute("focusable").equals("true");
-
-    def isFocused(self):
-        return self.__get__(self, None).getAttribute("focused").equals("true");
-
-    def isScrollable(self):
-        return self.__get__(self, None).getAttribute("scrollable").equals("true");
-
-    def isLongClickable(self):
-        return self.__get__(self, None).getAttribute("longClickable").equals("true");
-
-    def isSelected(self):
-        return self.__get__(self, None).getAttribute("selected").equals("true");
-
-    def getLocation(self):
-        return self.__get__(self, None).getLocation();
-
-    def getText(self):
-        return self.__get__(self, None).getAttribute("name");
-
-    def getResourceId(self):
-        return self.__get__(self, None).getAttribute("resourceId");
-
-    def getClassName(self):
-        return self.__get__(self, None).getAttribute("className");
-
-    def getContentDesc(self):
-        return self.__get__(self, None).getAttribute("contentDesc");
     
 class MobileElements(object):
     
