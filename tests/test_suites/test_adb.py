@@ -8,7 +8,7 @@ import time
 from pyautomation.mobile.adb import Adb
 
 
-# print(Adb.get_connected_devices())
+print(Adb.get_connected_devices())
 adb = Adb(Adb.get_connected_devices()[0])
 # print("adb.get_device_carrier() " + adb.get_device_carrier())
 # print("adb.get_device_serial_number() " + adb.get_device_serial_number())

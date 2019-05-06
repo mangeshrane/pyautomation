@@ -2548,3 +2548,752 @@ CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new Ui
 CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
 CORE-conftest.py-70-pytest_runtest_makereport: Not able to get screen-recording
 CORE-conftest.py-71-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning mobile.capabilities: {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': 'C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk', 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity', 'no_reset': True, 'full_reset': True}
+CORE-config_reader.py-39-get: config returning android.url: http://localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning mobile.capabilities: {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': 'C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk', 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity', 'no_reset': True, 'full_reset': True}
+CORE-config_reader.py-39-get: config returning android.url: http://localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-70-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-71-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-108-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5556 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell am force-stop com.google.android.gm
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-108-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5556 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell am force-stop com.google.android.gm
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting browser : mobile_device
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting browser : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device
+CORE-config_reader.py-24-__init__: Exception occured [Errno 2] No such file or directory: 'D:config\\mobile_device'
+CORE-config_reader.py-25-__init__: Please put config file in [projectRoot]/config/default.yml or set environ variable AUTO_CONFIG
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'application': {'username': 'admin@phptravels.com', 'password': 'demoadmin'}, 'webdriver': {'sauce': {'username': None, 'key': None, 'browserName': None, 'caps': {'browserName': 'chrome', 'version': 66, 'platform': 'macOS 10.13'}}, 'remote': {'url': 'http://172.26.21.92:4444/wd/hub', 'platform': 'Windows'}, 'type': 'remote', 'chrome': {'driver': 'C:\\chromedriver.exe', 'arguments': ['--disable-extensions', '--headless']}, 'firefox': {'driver': 'C:\\geckodriver.exe', 'preferences': {'browser.download.dir': 'H:\\Downloads', 'browser.download.manager.showWhenStarting': False}}, 'wait': {'short': 10, 'long': 30}, 'implicit_wait': 10}, 'tests': {'mobile': {'scope': 'class', 'device_id': None, 'device_name': 'mobile_device'}, 'browser': {'name': 'firefox', 'scope': 'class'}}, 'api': {'request': {'timeout': 20}}}
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'appium': {'url': 'localhost:4723/wd/hub'}, 'capabilities': {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': 'C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk', 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity', 'no_reset': True, 'full_reset': True}}
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'application': {'username': 'admin@phptravels.com', 'password': 'demoadmin'}, 'webdriver': {'sauce': {'username': None, 'key': None, 'browserName': None, 'caps': {'browserName': 'chrome', 'version': 66, 'platform': 'macOS 10.13'}}, 'remote': {'url': 'http://172.26.21.92:4444/wd/hub', 'platform': 'Windows'}, 'type': 'remote', 'chrome': {'driver': 'C:\\chromedriver.exe', 'arguments': ['--disable-extensions', '--headless']}, 'firefox': {'driver': 'C:\\geckodriver.exe', 'preferences': {'browser.download.dir': 'H:\\Downloads', 'browser.download.manager.showWhenStarting': False}}, 'wait': {'short': 10, 'long': 30}, 'implicit_wait': 10}, 'tests': {'mobile': {'scope': 'class', 'device_id': None, 'device_name': 'mobile_device'}, 'browser': {'name': 'firefox', 'scope': 'class'}}, 'api': {'request': {'timeout': 20}}}
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'appium': {'url': 'localhost:4723/wd/hub'}, 'capabilities': {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': 'C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk', 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity', 'no_reset': True, 'full_reset': True}}
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'application': {'username': 'admin@phptravels.com', 'password': 'demoadmin'}, 'webdriver': {'sauce': {'username': None, 'key': None, 'browserName': None, 'caps': {'browserName': 'chrome', 'version': 66, 'platform': 'macOS 10.13'}}, 'remote': {'url': 'http://172.26.21.92:4444/wd/hub', 'platform': 'Windows'}, 'type': 'remote', 'chrome': {'driver': 'C:\\chromedriver.exe', 'arguments': ['--disable-extensions', '--headless']}, 'firefox': {'driver': 'C:\\geckodriver.exe', 'preferences': {'browser.download.dir': 'H:\\Downloads', 'browser.download.manager.showWhenStarting': False}}, 'wait': {'short': 10, 'long': 30}, 'implicit_wait': 10}, 'tests': {'mobile': {'scope': 'class', 'device_id': None, 'device_name': 'mobile_device'}, 'browser': {'name': 'firefox', 'scope': 'class'}}, 'api': {'request': {'timeout': 20}}}
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'appium': {'url': 'localhost:4723/wd/hub'}, 'capabilities': {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': 'C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk', 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity', 'no_reset': True, 'full_reset': True}}
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'application': {'username': 'admin@phptravels.com', 'password': 'demoadmin'}, 'webdriver': {'sauce': {'username': None, 'key': None, 'browserName': None, 'caps': {'browserName': 'chrome', 'version': 66, 'platform': 'macOS 10.13'}}, 'remote': {'url': 'http://172.26.21.92:4444/wd/hub', 'platform': 'Windows'}, 'type': 'remote', 'chrome': {'driver': 'C:\\chromedriver.exe', 'arguments': ['--disable-extensions', '--headless']}, 'firefox': {'driver': 'C:\\geckodriver.exe', 'preferences': {'browser.download.dir': 'H:\\Downloads', 'browser.download.manager.showWhenStarting': False}}, 'wait': {'short': 10, 'long': 30}, 'implicit_wait': 10}, 'tests': {'mobile': {'scope': 'class', 'device_id': None, 'device_name': 'mobile_device'}, 'browser': {'name': 'firefox', 'scope': 'class'}}, 'api': {'request': {'timeout': 20}}}
+CORE-config_reader.py-39-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-39-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config{'appium': {'url': 'localhost:4723/wd/hub'}, 'capabilities': {'browserName': None, 'deviceName': 'emulator', 'platformName': 'android', 'app': 'C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk', 'orientation': None, 'platformVersion': '8.0.0', 'appPackage': 'io.selendroid.testapp', 'appActivity': 'io.selendroid.testapp.HomeScreenActivity', 'no_reset': True, 'full_reset': True}}
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile:  ----- > None
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile:  ----- > None
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile:  ----- > None
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile:  ----- > None
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile: <pyautomation.configuration.config_reader.Config object at 0x04693AD0>
+CORE-config_reader.py-20-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-21-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-41-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-16-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile: None
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb start-server
+CORE-adb.py-108-get_available_devices: Checking for available devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5556 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell pm list packages
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell dumpsys window windows | grep mCurrentFocus
+CORE-adb.py-18-command: Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 shell am force-stop com.google.android.gm
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: emulator-5556
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: emulator-5556
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: emulator-5556
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: emulator-5556
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: mobile_device
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : mobile_device
+CORE-config_reader.py-15-__init__: using log file: mobile_device.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: emulator-5554
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: emulator-5554
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-mobile_test.py-31-mobile: Error while lauching android emulator
+CORE-mobile_test.py-32-mobile: please make sure you have emulator in path or ANDROID_HOME variable is set
+CORE-mobile_test.py-33-mobile: current ANDROID_HOME C:\Users\mrane\Downloads\sdk-tools-windows-4333796
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-mobile_test.py-31-mobile: Error while lauching android emulator
+CORE-mobile_test.py-32-mobile: please make sure you have emulator in path or ANDROID_HOME variable is set
+CORE-mobile_test.py-33-mobile: current ANDROID_HOME C:\Users\mrane\Downloads\sdk-tools-windows-4333796
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-mobile_test.py-31-mobile: Error while lauching android emulator
+CORE-mobile_test.py-32-mobile: please make sure you have emulator in path or ANDROID_HOME variable is set
+CORE-mobile_test.py-33-mobile: current ANDROID_HOME C:\Users\mrane\Downloads\sdk-tools-windows-4333796
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-mobile_test.py-31-mobile: Error while lauching android emulator
+CORE-mobile_test.py-32-mobile: please make sure you have emulator in path or ANDROID_HOME variable is set
+CORE-mobile_test.py-33-mobile: current ANDROID_HOME C:\Users\mrane\Downloads\sdk-tools-windows-4333796
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-mobile_test.py-31-mobile: Error while lauching android emulator
+CORE-mobile_test.py-32-mobile: please make sure you have emulator in path or ANDROID_HOME variable is set
+CORE-mobile_test.py-33-mobile: current ANDROID_HOME C:\Users\mrane\Downloads\sdk-tools-windows-4333796
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-mobile_test.py-43-mobile: Tear down completed
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_type: emulator
+CORE-mobile_test.py-24-mobile: starting emulator test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_element.py-39-__get__: returning element id=io.selendroid.testapp:id/my_text_field 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/input_adds_check_box") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/visibleButtonTest") 
+CORE-mobile_element.py-39-__get__: returning element -android uiautomator=new UiSelector().resourceId("io.selendroid.testapp:id/showPopupWindowButton") 
+CORE-conftest.py-78-pytest_runtest_makereport: Not able to get screen-recording
+CORE-conftest.py-79-pytest_runtest_makereport: An unknown server-side error occurred while processing the command. Original error: Screen recording does not work on emulators running Android API level less than 27
+CORE-mobile_test.py-43-mobile: Tear down completed
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-22-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-30-mobile: Checking if device is connected
+CORE-mobile_drivers.py-31-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-mobile_test.py-38-mobile: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device.
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: 'NoneType' object has no attribute 'get'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-24-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-33-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: 'NoneType' object has no attribute 'get'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-25-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-34-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: 'NoneType' object has no attribute 'get'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-25-mobile: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-34-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: type object 'MobileDrivers' has no attribute 'MOBILE_CONFIG'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: type object 'MobileDrivers' has no attribute 'MOBILE_CONFIG'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: type object 'MobileDrivers' has no attribute 'MOBILE_CONFIG'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-mobile_test.py-20-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-36-mobile: type object 'MobileDrivers' has no attribute 'MOBILE_CONFIG'
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-34-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-32-mobile: Checking if device is connected
+CORE-mobile_drivers.py-34-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-28-__init__: Unable to get config file named test
+CORE-mobile_drivers.py-29-__init__: Please specify config file in config folder named test with desired configuration
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation
+CORE-config_reader.py-20-__init__: using default config file: D:config\default.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-config_reader.py-40-get: config returning tests.mobile.scope: class
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_drivers.py-23-__init__: MOBILE.DEVICE not found setting device : test
+CORE-config_reader.py-15-__init__: using log file: test.yml
+CORE-config_reader.py-30-_load_config: Succesfully Loaded config
+CORE-mobile_drivers.py-28-__init__: Unable to get config file named test
+CORE-mobile_drivers.py-29-__init__: Please specify config file in config folder named test with desired configuration
+CORE-mobile_test.py-21-mobile: starting appium server
+CORE-config_reader.py-40-get: config returning tests.mobile.device_name: test
+CORE-mobile_test.py-37-mobile: 'NoneType' object has no attribute 'lower'
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: {'url': 'localhost:4723/wd/hub'}
+CORE-config_reader.py-40-get: config returning tests.mobile.device_id: None
+CORE-config_reader.py-40-get: config returning appium.url: localhost:4723/wd/hub

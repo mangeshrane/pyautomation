@@ -31,25 +31,13 @@ webdriver:
 tests:
     mobile:
         scope: class
+        device_id: null
+        device_type: emulator
+        device_name: test
     browser:
         name: firefox
         scope: class
-mobile:
-    remote:
-        url: localhost:4723/wd/hub
-    capabilities:
-        browserName: null
-        deviceName: emulator
-        platformName: android
-        app: C:\Users\mrane\Downloads\selendroid-test-app-0.17.0.apk
-        orientation: null
-        platformVersion: 8.0.0
-        appPackage: io.selendroid.testapp
-        appActivity: io.selendroid.testapp.HomeScreenActivity
-        no_reset: true
-        full_reset: true
-android:
-    url: http://localhost:4723/wd/hub
+
 api:
     request:
         timeout: 20

@@ -13,7 +13,7 @@ class Config(object):
             self.filename = os.environ['AUTO_CONFIG']
         elif filename:
             LOG.info("using log file: " + filename)
-            self.filename = filename
+            self.filename = os.path.join(FileManager.get_project_root(), "config", filename)
         else:
             self.filename = os.path.join(FileManager.get_project_root(), "config", "default.yml")
             LOG.info("current working directory :" + os.getcwd())
@@ -31,12 +31,16 @@ class Config(object):
         config_yaml.close()
 
     def get(self, key, default=None):
-        if "." in key:
-            tmp = self.yml_dict
-            keys = key.split(".")
-            for k in keys:
-                tmp = tmp[k]
-            LOG.info("config returning {0}: {1}".format(key, tmp))
-            return tmp
-        else:
+        try:
+            if "." in key:
+                tmp = self.yml_dict
+                keys = key.split(".")
+                for k in keys:
+                    tmp = tmp[k]
+                LOG.info("config returning {0}: {1}".format(key, tmp))
+                return tmp
+            else:
+                return self.yml_dict[key]
+        except:
             return default
+

@@ -1,0 +1,14 @@
+--- 
+appium: 
+  url: "localhost:4723/wd/hub"
+capabilities: 
+  app: "C:\\Users\\mrane\\Downloads\\selendroid-test-app-0.17.0.apk"
+  appActivity: io.selendroid.testapp.HomeScreenActivity
+  appPackage: io.selendroid.testapp
+  browserName: ~
+  deviceName: emulator
+  full_reset: true
+  no_reset: true
+  orientation: ~
+  platformName: android
+  platformVersion: "8.0.0"

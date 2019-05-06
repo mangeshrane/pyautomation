@@ -1,0 +1,19 @@
+CORE-config_reader.py-16-__init__: using log file: D:\Workspace\pyautomation\config\mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-16-__init__: using log file: D:\Workspace\pyautomation\config\mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-16-__init__: using log file: D:\Workspace\pyautomation\config\mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-16-__init__: using log file: D:\Workspace\pyautomation\config\mobile_device.yml
+CORE-config_reader.py-31-_load_config: Succesfully Loaded config
+CORE-config_reader.py-41-get: config returning appium.url: localhost:4723/wd/hub
+CORE-config_reader.py-19-__init__: current working directory :D:\Workspace\pyautomation\pyautomation\drivers
+CORE-config_reader.py-20-__init__: using default config file: D:\Workspace\pyautomation\pyautomation\config\default.yml
+CORE-config_reader.py-24-__init__: Exception occured [Errno 2] No such file or directory: 'D:\\Workspace\\pyautomation\\pyautomation\\config\\default.yml'
+CORE-config_reader.py-25-__init__: Please put config file in [projectRoot]/config/default.yml or set environ variable AUTO_CONFIG
+CORE-mobile_drivers.py-25-mobile: MOBILE.DEVICE not found setting device : default
+CORE-config_reader.py-15-__init__: using log file: default.yml
+CORE-config_reader.py-24-__init__: Exception occured [Errno 2] No such file or directory: 'D:\\Workspace\\pyautomation\\pyautomation\\config\\default.yml'
+CORE-config_reader.py-25-__init__: Please put config file in [projectRoot]/config/default.yml or set environ variable AUTO_CONFIG
+CORE-mobile_drivers.py-33-mobile: Checking if device is connected
+CORE-mobile_drivers.py-35-mobile: None

@@ -9,7 +9,8 @@ from pyautomation.logger.logger import LOG
 from selenium.common.exceptions import WebDriverException
 import base64
 # 
-# def pytest_addoption(parser):
+def pytest_addoption(parser):
+    parser.addoption("--mobile_device", action='store')
 #     parser.addoption("--config", action="store")
 #     parser.addoption("--browser", action="store")
 #          
@@ -33,6 +34,13 @@ import base64
 #         os.environ["CORE.DRIVER"] = browser
 #         print("-- overriding default driver configuration with : " + browser)
 
+@pytest.fixture(scope='session')
+def mobile_device(request):
+    browser = request.config.option.mobile_device
+    if browser:
+        os.environ["MOBILE.DEVICE"] = mobile_device
+        print("-- overriding default mobile device configuration with : " + mobile_device)
+        
 # Reporting attach screenshot when test fails
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):

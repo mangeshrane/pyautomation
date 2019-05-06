@@ -12,6 +12,7 @@ class MobilePage(object):
     
     def __init__(self, driver: webdriver.Remote):
         self.driver = driver
+        self.driver.start_recording_screen()
     
     def swipe(self):
         pass
