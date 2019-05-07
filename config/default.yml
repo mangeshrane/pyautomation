@@ -13,7 +13,7 @@ webdriver:
     remote:
         url: 'http://172.26.21.92:4444/wd/hub'
         platform: Windows
-    type: remote
+    type: local
     chrome:
         driver: 'C:\chromedriver.exe'
         arguments:
@@ -35,7 +35,7 @@ tests:
         device_type: emulator
         device_name: test
     browser:
-        name: firefox
+        name: chrome
         scope: class
 
 api:

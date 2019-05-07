@@ -1,0 +1,22 @@
+adb.py                      18 INFO     Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+mobile_test.py              23 INFO     Connected devices set()
+config_reader.py            40 INFO     config returning tests.mobile.device_name: test
+mobile_drivers.py           23 WARNING  MOBILE.DEVICE not found setting device : test
+config_reader.py            15 INFO     using log file: test.yml
+config_reader.py            30 INFO     Succesfully Loaded config
+mobile_drivers.py           28 ERROR    Unable to get config file named test
+mobile_drivers.py           29 ERROR    Please specify config file in config folder named test with desired configuration
+mobile_test.py              26 INFO     starting appium server
+config_reader.py            40 INFO     config returning tests.mobile.device_name: test
+config_reader.py            40 INFO     config returning capabilities.platformName: android
+config_reader.py            40 INFO     config returning tests.mobile.device_type: emulator
+mobile_test.py              31 INFO     starting emulator test
+adb.py                      18 INFO     Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb devices
+mobile_test.py              40 INFO     Connected devices {'emulator-5554'}
+mobile_test.py              42 INFO     started emulator {'emulator-5554'}
+mobile_drivers.py           33 INFO     Checking if device is connected
+mobile_drivers.py           35 INFO     {'url': 'localhost:4723/wd/hub'}
+config_reader.py            40 INFO     config returning tests.mobile.device_id: None
+config_reader.py            40 INFO     config returning appium.url: localhost:4723/wd/hub
+adb.py                      18 INFO     Executing command : C:\Users\mrane\Downloads\sdk-tools-windows-4333796\platform-tools\adb -s emulator-5554 emu kill
+mobile_test.py              51 INFO     Tear down completed

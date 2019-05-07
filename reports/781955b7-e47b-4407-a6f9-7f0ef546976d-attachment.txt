@@ -1,0 +1,6 @@
+config_reader.py            40 INFO     config returning api.request.timeout: 20
+request.py                 142 INFO     API Request : {'method': 'DELETE', 'url': 'http://fakerestapi.azurewebsites.net/api/Books/20', 'headers': {'Content-Length': '0'}, '_cookies': <RequestsCookieJar[]>, 'body': None, 'hooks': {'response': []}, '_body_position': None}
+response.py                 28 INFO     API Response body : 
+response.py                 29 INFO     API Response headers : {'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'Set-Cookie': 'ARRAffinity=178a4cc53beccb8708c798616756c20b03d1b05eee64552241314c6172225e4f;Path=/;HttpOnly;Domain=fakerestapi.azurewebsites.net', 'Date': 'Tue, 07 May 2019 08:35:55 GMT', 'Content-Length': '0'}
+response.py                 30 INFO     API Response cookies : <RequestsCookieJar[<Cookie ARRAffinity=178a4cc53beccb8708c798616756c20b03d1b05eee64552241314c6172225e4f for .fakerestapi.azurewebsites.net/>]>
+response.py                 31 INFO     API Response status code : 200

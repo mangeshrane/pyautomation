@@ -1,0 +1,2 @@
+HAX is working and emulator runs in fast virt mode.
+[35m[Appium][39m Welcome to Appium v1.13.0

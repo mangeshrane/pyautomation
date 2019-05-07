@@ -1,0 +1,20 @@
+CORE-mobile_drivers.py-28-__init__: Unable to get config file named test
+CORE-mobile_drivers.py-29-__init__: Please specify config file in config folder named test with desired configuration
+dsound: Could not initialize DirectSoundCapture
+dsound: Reason: No sound driver is available for use, or the given GUID is not a valid DirectSound device ID
+dsound: Attempt to initialize voice without DirectSoundCapture object
+dsound: Attempt to initialize voice without DirectSoundCapture object
+audio: Failed to create voice `goldfish_audio_in'
+C:\Users\mrane\Downloads\sdk-tools-windows-4333796\emulator\qemu\windows-x86_64\qemu-system-i386.exe: warning: opening audio input failed
+dsound: Attempt to initialize voice without DirectSoundCapture object
+dsound: Attempt to initialize voice without DirectSoundCapture object
+audio: Failed to create voice `adc'
+dsound: Attempt to initialize voice without DirectSoundCapture object
+dsound: Attempt to initialize voice without DirectSoundCapture object
+audio: Failed to create voice `adc'
+[35m[HTTP][39m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+Fatal Error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+    at Server.setupListenHandle [as _listen2] (net.js:1270:14)
+    at listenInCluster (net.js:1318:12)
+    at doListen (net.js:1451:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)

@@ -1,0 +1,3 @@
+HAX is working and emulator runs in fast virt mode.
+[35m[Appium][39m Welcome to Appium v1.13.0
+emulator: Saving state on exit with session uptime 16528 ms

@@ -1,0 +1,9 @@
+config_reader.py            40 INFO     config returning tests.browser.name: firefox
+web_drivers.py              84 WARNING  CORE.DRIVER not found setting browser : firefox
+config_reader.py            40 INFO     config returning webdriver.remote.platform: Windows
+config_reader.py            40 INFO     config returning webdriver.firefox.preferences: {'browser.download.dir': 'H:\\Downloads', 'browser.download.manager.showWhenStarting': False}
+config_reader.py            40 INFO     config returning webdriver.type: remote
+config_reader.py            40 INFO     config returning webdriver.remote.url: http://172.26.21.92:4444/wd/hub
+connectionpool.py          662 WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x055E9990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session
+connectionpool.py          662 WARNING  Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x055E9A50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session
+connectionpool.py          662 WARNING  Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x055E9AD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session

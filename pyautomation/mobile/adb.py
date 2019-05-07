@@ -26,8 +26,12 @@ class Adb(object):
             return output.decode('utf-8').strip();
     
     @staticmethod
+    def kill_emulator(emulator_id):
+        return Adb.command('adb -s {0} emu kill'.format(emulator_id))
+    
+    @staticmethod
     def get_connected_devices():
-        devices = [];
+        devices = []
         output = Adb.command("adb devices")
         for line in str(output).split("\n"):
             line = line.strip()

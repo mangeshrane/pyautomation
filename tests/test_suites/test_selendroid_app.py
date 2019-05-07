@@ -29,13 +29,13 @@ class TestSelendroidApp(MobileTest):
     
     def test_input_text(self):
         homepage = HomePage(self.driver)
-        homepage.input_box.send_keys("Test String")
-        self.driver.hide_keyboard()
-#         homepage.progress_bar_btn.click()
-        homepage.accept_adds_checkbox.click()
-        homepage.text_view_btn.click()
-        homepage.popup_btn.click()
-        self.driver.switch_to.alert.dismiss()
+#         homepage.input_box.send_keys("Test String")
+#         self.driver.hide_keyboard()
+# #         homepage.progress_bar_btn.click()
+#         homepage.accept_adds_checkbox.click()
+#         homepage.text_view_btn.click()
+#         homepage.popup_btn.click()
+#         self.driver.switch_to.alert.dismiss()
 #         alert = self.driver.switch_to().alert()
 #         alert.dismiss()
     
